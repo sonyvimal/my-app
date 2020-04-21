@@ -8,8 +8,9 @@ node{
    }
    
    stage('SonarQube Analysis') {
+       def scannerhome = tool 'sonarscanner';
         withSonarQubeEnv('SonarQube') { 
-          sh "mvn sonar:sonar"
+          sh "mvn sonar:sonar -D sonar.login = admin -D sonar.password = admin"
         }
     }
    
