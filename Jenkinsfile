@@ -10,5 +10,9 @@ node {
   body: 'Welcome to Jenkins Email Alerts', cc: '', from: '', replyTo: '',
   subject: 'MAIL | JENKINS SERVER', to: 'sony.vimal@gmail.com'
   }
+  stage ('Slack Notification'){
+  slackSend channel: '#jenkins-builds', message: 'Welcome to Jenkins, Slack Channel !!!', teamDomain: 'gta-cm',
+  tokenCredentialId: 'SlackID', username: 'sony.vimal@gmail.com'
+  }
 }
 
