@@ -11,7 +11,7 @@ node {
   subject: 'MAIL | JENKINS SERVER', to: 'sony.vimal@gmail.com'
   }
   stage ('Slack Notification'){
-  slackSend channel: '#jenkins-pipeline-notification', message: 'Jenkins Notification Alerts', teamDomain: 'gta-cm', tokenCredentialId: 'JenkinsSlackID', username: 'sony.vimal@gmail.com'
+  slackSend channel: '#jenkins-pipeline-notification', message: 'Jenkins Notification Alerts', teamDomain: 'gta-cm', tokenCredentialId: 'SlackNotification', username: 'sony.vimal@gmail.com'
   }
 }
 
